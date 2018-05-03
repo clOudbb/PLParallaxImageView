@@ -20,10 +20,25 @@
 @interface PLScroImageView : UIView <PLScroDataSource>
 
 @property (nonatomic, strong) UIImage *image;
+@property (nullable, nonatomic, strong) UIImage *highlightedImage NS_AVAILABLE_IOS(3_0); // default is nil
+@property (nonatomic, assign) BOOL userInterEnabledWithImage; // default is NO
+@property (nullable, nonatomic, copy) NSArray<UIImage *> *animationImages; // The array must contain UIImages. Setting hides the single image. default is nil
+@property (nullable, nonatomic, copy) NSArray<UIImage *> *highlightedAnimationImages NS_AVAILABLE_IOS(3_0); // The array must contain UIImages. Setting hides the single image. default is nil
+
+@property (nonatomic) NSTimeInterval animationDuration;         // for one cycle of images. default is number of images * 1/30th of a second (i.e. 30 fps)
+@property (nonatomic) NSInteger      animationRepeatCount;      // 0 means infinite (default is 0)
+
+@property (nonatomic, assign) BOOL isAnimaing;
 
 - (void)viewDidScroll;
 
 @end
 
+@interface PLScroImageView (Origin)
+
+- (void)startAnimation;
+- (void)stopAnimation;
+
+@end
 
 

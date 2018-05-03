@@ -35,11 +35,55 @@
 //    [self viewDidScroll:_tableView];
 }
 
+#pragma mark - image property
 - (void)setImage:(UIImage *)image
 {
     _image = image;
     _imgView.image = image;
 }
+
+- (void)setHighlightedImage:(UIImage *)highlightedImage
+{
+    _highlightedImage = highlightedImage;
+    _imgView.highlightedImage = highlightedImage;
+}
+
+- (void)setUserInterEnabledWithImage:(BOOL)userInterEnabledWithImage
+{
+    _userInterEnabledWithImage = userInterEnabledWithImage;
+    _imgView.userInteractionEnabled = userInterEnabledWithImage;
+}
+
+- (void)setAnimationImages:(NSArray<UIImage *> *)animationImages
+{
+    _animationImages = animationImages;
+    _imgView.animationImages = animationImages;
+}
+
+- (void)setHighlightedAnimationImages:(NSArray<UIImage *> *)highlightedAnimationImages
+{
+    _highlightedAnimationImages = highlightedAnimationImages;
+    _imgView.highlightedAnimationImages = highlightedAnimationImages;
+}
+
+- (void)setAnimationDuration:(NSTimeInterval)animationDuration
+{
+    _animationDuration = animationDuration;
+    _imgView.animationDuration = animationDuration;
+}
+
+- (void)setAnimationRepeatCount:(NSInteger)animationRepeatCount
+{
+    _animationRepeatCount = animationRepeatCount;
+    _imgView.animationRepeatCount = animationRepeatCount;
+}
+
+- (BOOL)isAnimaing
+{
+    return [_imgView isAnimating];
+}
+
+#pragma mark - getter
 
 - (UIImageView *)imgView
 {
@@ -48,6 +92,8 @@
     }
     return _imgView;
 }
+
+#pragma mark - Custom
 
 - (void)viewDidScroll
 {
@@ -66,9 +112,24 @@
     // 先將imageView向上移動一半的視差高度(difference/2)，然後根據move程度變化y的位置
     CGRect imageRect = _imgView.frame;
     imageRect.origin.y = -(_parallax / 2) + move;
-    _imgView.frame = imageRect;
+    _imgView.frame = imageRect;    
 }
 
 
+
+@end
+
+
+@implementation PLScroImageView (Origin)
+
+- (void)startAnimation
+{
+    [self.imgView startAnimating];
+}
+
+- (void)stopAnimation
+{
+    [self.imgView stopAnimating];
+}
 
 @end
