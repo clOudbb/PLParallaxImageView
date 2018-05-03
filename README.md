@@ -1,2 +1,2 @@
-# PLScroImageView
+# PLParallaxImageView
 a parallax image view
