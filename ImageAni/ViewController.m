@@ -58,8 +58,10 @@ static NSString * const kImageTableViewCell = @"ImageTableViewCell";
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    for (ImageTableViewCell *cell in _tableView.visibleCells) {
-        [cell.imgView viewDidScroll];
+    if (_tableView.visibleCells && _tableView.visibleCells > 0) {
+        for (ImageTableViewCell *cell in _tableView.visibleCells) {
+            [cell.imgView viewDidScroll];
+        }
     }
 }
 
