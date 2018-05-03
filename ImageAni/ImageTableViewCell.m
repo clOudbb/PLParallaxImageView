@@ -7,7 +7,7 @@
 //
 
 #import "ImageTableViewCell.h"
-#import "PLScroImageView.h"
+
 @implementation ImageTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -27,10 +27,10 @@
     _titleLabel.frame = (CGRect){0, self.frame.size.height - 40, self.frame.size.width, 30};
 }
 
-- (PLScroImageView *)imgView
+- (PLParallaxImageView *)imgView
 {
     if (!_imgView) {
-        _imgView = [PLScroImageView new];
+        _imgView = [PLParallaxImageView new];
         _imgView.cell = self;
         _imgView.parallax = 70;
     }

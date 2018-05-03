@@ -1,5 +1,5 @@
 //
-//  PLScroImageView.h
+//  PLParallaxImageView.h
 //  ImageAni
 //
 //  Created by qmtv on 2018/5/3.
@@ -10,14 +10,14 @@
  */
 #import <UIKit/UIKit.h>
 
-@protocol PLScroDataSource <NSObject>
+@protocol PLParallaxDataSource <NSObject>
 @required
 @property (nonatomic, assign) CGFloat parallax;
 @property (nonatomic, weak) __kindof UITableViewCell *cell;
 @end
 //复写所有ImageView属性
 
-@interface PLScroImageView : UIView <PLScroDataSource>
+@interface PLParallaxImageView : UIView <PLParallaxDataSource>
 
 @property (nonatomic, strong) UIImage *image;
 @property (nullable, nonatomic, strong) UIImage *highlightedImage NS_AVAILABLE_IOS(3_0); // default is nil
@@ -34,7 +34,7 @@
 
 @end
 
-@interface PLScroImageView (Origin)
+@interface PLParallaxImageView (Origin)
 
 - (void)startAnimation;
 - (void)stopAnimation;

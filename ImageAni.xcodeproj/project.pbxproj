@@ -18,7 +18,7 @@
 		577A0E49209AA47F00DAE31B /* ImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A0E48209AA47F00DAE31B /* ImageTableViewCell.m */; };
 		577A0E4C209AAFDD00DAE31B /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 577A0E4A209AAFDD00DAE31B /* 1.jpg */; };
 		577A0E4D209AAFDD00DAE31B /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 577A0E4B209AAFDD00DAE31B /* 2.jpg */; };
-		577A0E50209AE87E00DAE31B /* PLScroImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A0E4F209AE87E00DAE31B /* PLScroImageView.m */; };
+		577A0E56209B009B00DAE31B /* PLParallaxImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 577A0E55209B009B00DAE31B /* PLParallaxImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +59,8 @@
 		577A0E48209AA47F00DAE31B /* ImageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewCell.m; sourceTree = "<group>"; };
 		577A0E4A209AAFDD00DAE31B /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		577A0E4B209AAFDD00DAE31B /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
-		577A0E4E209AE87E00DAE31B /* PLScroImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLScroImageView.h; sourceTree = "<group>"; };
-		577A0E4F209AE87E00DAE31B /* PLScroImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLScroImageView.m; sourceTree = "<group>"; };
+		577A0E54209B009B00DAE31B /* PLParallaxImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PLParallaxImageView.h; path = ImageAni/PLParallaxImageView/PLParallaxImageView.h; sourceTree = SOURCE_ROOT; };
+		577A0E55209B009B00DAE31B /* PLParallaxImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PLParallaxImageView.m; path = ImageAni/PLParallaxImageView/PLParallaxImageView.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,7 @@
 		577A0E14209AA41900DAE31B /* ImageAni */ = {
 			isa = PBXGroup;
 			children = (
-				577A0E53209AF8D200DAE31B /* PLScroImageView */,
+				577A0E57209B00A200DAE31B /* PLParallaxImageView */,
 				577A0E15209AA41900DAE31B /* AppDelegate.h */,
 				577A0E16209AA41900DAE31B /* AppDelegate.m */,
 				577A0E18209AA41900DAE31B /* ViewController.h */,
@@ -147,13 +147,13 @@
 			path = ImageAniUITests;
 			sourceTree = "<group>";
 		};
-		577A0E53209AF8D200DAE31B /* PLScroImageView */ = {
+		577A0E57209B00A200DAE31B /* PLParallaxImageView */ = {
 			isa = PBXGroup;
 			children = (
-				577A0E4E209AE87E00DAE31B /* PLScroImageView.h */,
-				577A0E4F209AE87E00DAE31B /* PLScroImageView.m */,
+				577A0E54209B009B00DAE31B /* PLParallaxImageView.h */,
+				577A0E55209B009B00DAE31B /* PLParallaxImageView.m */,
 			);
-			path = PLScroImageView;
+			path = PLParallaxImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,8 +289,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				577A0E1A209AA41900DAE31B /* ViewController.m in Sources */,
+				577A0E56209B009B00DAE31B /* PLParallaxImageView.m in Sources */,
 				577A0E49209AA47F00DAE31B /* ImageTableViewCell.m in Sources */,
-				577A0E50209AE87E00DAE31B /* PLScroImageView.m in Sources */,
 				577A0E25209AA41B00DAE31B /* main.m in Sources */,
 				577A0E17209AA41900DAE31B /* AppDelegate.m in Sources */,
 			);

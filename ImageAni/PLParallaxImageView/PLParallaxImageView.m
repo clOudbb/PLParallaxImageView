@@ -1,20 +1,20 @@
 //
-//  PLScroImageView.m
+//  PLParallaxImageView.m
 //  ImageAni
 //
 //  Created by qmtv on 2018/5/3.
 //  Copyright © 2018年 clOud. All rights reserved.
 //
 
-#import "PLScroImageView.h"
+#import "PLParallaxImageView.h"
 
-@interface PLScroImageView ()
+@interface PLParallaxImageView ()
 
 @property (nonatomic, strong) UIImageView *imgView;
 
 @end
 
-@implementation PLScroImageView
+@implementation PLParallaxImageView
 @synthesize parallax = _parallax;
 @synthesize cell = _cell;
 
@@ -32,7 +32,7 @@
 {
     [super layoutSubviews];
     _imgView.frame = (CGRect){0, 0, self.frame.size.width, self.frame.size.height + _parallax};
-//    [self viewDidScroll:_tableView];
+    //    [self viewDidScroll:_tableView];
 }
 
 #pragma mark - image property
@@ -112,7 +112,7 @@
     // 先將imageView向上移動一半的視差高度(difference/2)，然後根據move程度變化y的位置
     CGRect imageRect = _imgView.frame;
     imageRect.origin.y = -(_parallax / 2) + move;
-    _imgView.frame = imageRect;    
+    _imgView.frame = imageRect;
 }
 
 
@@ -120,7 +120,7 @@
 @end
 
 
-@implementation PLScroImageView (Origin)
+@implementation PLParallaxImageView (Origin)
 
 - (void)startAnimation
 {

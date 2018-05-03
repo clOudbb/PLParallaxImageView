@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PLScroImageView.h"
+#import "PLParallaxImageView.h"
 @interface ImageTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) PLScroImageView *imgView;
+@property (nonatomic, strong) PLParallaxImageView *imgView;
 @property (nonatomic, strong) UILabel *titleLabel;
 
 @property (nonatomic, weak) UITableView *tableView;
